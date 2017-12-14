@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>業務報告ジェネレータ</title>
+	<link rel="stylesheet" href="nippo-generator.css">
+	<script src="nippo-gennerator.js"></script>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="container">
+			<h1>業務報告ジェネレータ</h1>
+
+			<!-- ＝＝＝＝＝＝入力＝＝＝＝＝＝＝＝ -->
+			<section id="input">
+				<h2>業務内容を入力して下さい</h2>
+				<h3>氏名</h3>
+				<input type="text" id="name" value="">
+
+				<h3>業務</h3>
+				<div class="job_container">
+					<input type="text" id="job1">
+					<textarea name="" id="job_d1"></textarea>
+				</div>
+				<div class="job_container">
+					<input type="text" id="job2">
+					<textarea name="" id="job_d2"></textarea>
+				</div>
+				<div class="job_container">
+					<input type="text" id="job3">
+					<textarea name="" id="job_d3"></textarea>
+				</div>
+				<div class="job_container">
+					<input type="text" id="job4">
+					<textarea name="" id="job_d4"></textarea>
+				</div>
+				<div class="job_container">
+					<input type="text" id="job5">
+					<textarea name="" id="job_d5"></textarea>
+				</div>
+				<div class="job_container">
+					<input type="text" id="job6">
+					<textarea name="" id="job_d6"></textarea>
+				</div>
+				<div class="job_container">
+					<input type="text" id="job7">
+					<textarea name="" id="job_d7"></textarea>
+				</div>
+				<div class="job_container">
+					<input type="text" id="job8">
+					<textarea name="" id="job_d8"></textarea>
+				</div>
+				<div class="job_container">
+					<input type="text" id="job9">
+					<textarea name="" id="job_d9"></textarea>
+				</div>
+				<input type="text" id="job10">
+				<textarea name="" id="job_d10"></textarea>
+
+				<h3>更新</h3>
+				<div class="update_container">
+					<input type="text" id="update1">
+					<input type="number" id="update_num1">
+				</div>
+				<div class="update_container">
+					<input type="text" id="update2">
+					<input type="number" id="update_num2">
+				</div>
+				<div class="update_container">
+					<input type="text" id="update3">
+					<input type="number" id="update_num3">
+				</div>
+				<div class="update_container">
+					<input type="text" id="update4">
+					<input type="number" id="update_num4">
+				</div>
+				<div class="update_container">
+					<input type="text" id="update5">
+					<input type="number" id="update_num5">
+				</div>
+
+				<h3>所感</h3>
+				<textarea name="" id="imp"></textarea>
+
+				<button id="inputButton">業務報告を出力する</button>
+			</section>
+			<!-- ＝＝＝＝＝＝出力＝＝＝＝＝＝＝＝ -->
+			<section id="output">
+			</section>
+		</div>
+	</div>
+</body>
+
+</html>
