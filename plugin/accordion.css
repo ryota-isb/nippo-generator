@@ -1,0 +1,73 @@
+.accordion-box {
+    position: relative;
+}
+.accordion-box label {
+    cursor: pointer;
+    text-align: center;
+	font-family: "Mplus 1p";
+	font-weight: 100;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    width: 400x;
+}
+.accordion-box label:after {
+    content: "業務報告をもっと書く"; /* ラベルの文字 */
+    letter-spacing: .05em;
+    line-height: 2.5rem;
+    position: absolute;
+    bottom: -32px;
+    left: 0%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    color: #fff;
+    width: 18.75rem;
+}
+.accordion-box label:before {
+    content: "↓";
+    font-weight: 300;
+    position: absolute;
+    bottom: -24px;
+    left: 20px;
+    -webkit-transform: translate(-140px, 0);
+    transform: translate(-140px, 0);
+	border: 1px solid #fff;
+    z-index: 1;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    line-height: 20px;
+}
+.accordion-box > input {
+    display: none;
+}
+.accordion-box .accordion-container {
+    overflow: hidden;
+    height: 0px; /* 開く前に見えている部分の高さ */
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+
+.accordion-box > input:checked + label {
+     display: none ;
+}
+.accordion-box > input:checked + label:after {
+    content: "閉じる";
+}
+.accordion-box > input:checked + label:before {
+    content: "↑";
+}
+.accordion-box > input:checked ~ .accordion-container {
+    height: auto;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
