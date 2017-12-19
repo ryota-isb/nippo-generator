@@ -194,6 +194,7 @@ body {
 
 .button button:hover {
 	background-color: rgba(255, 255, 255, .5);
+	cursor: pointer;
 }
 
 #output p {
@@ -218,6 +219,7 @@ body {
 
 #output button:hover {
 	background-color: rgba(255, 255, 255, .5);
+	cursor: pointer;
 }
 
 .author {
