@@ -6,6 +6,8 @@
 	<title>業務報告ジェネレータ</title>
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="nippo-generator.css">
+	<link rel="stylesheet" href="plugin/accordion.css">
+	<link rel="stylesheet" href="plugin/text-animation.css">
 	<link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<script src="nippo-gennerator.js"></script>
@@ -15,7 +17,15 @@
 	<div class="bg">
 		<div class="container">
 			<section class="title">
-				<h1 .>業務報告<br><span>GENERATOR</span></h1>
+<!--				<h1>業務報告<br><span>GENERATOR</span></h1>-->
+				<h1>
+					<svg>
+    					<text x="0" y="80%" class="m1plus">業務報告</text>
+					</svg>
+					<svg>
+						<text x="0" y="80%" class="opensans">GENERATOR</text>
+					</svg>
+				</h1>
 				<p>本日もお疲れ様でした。<br>あなたの今日1日の業務内容を教えてください。</p>
 			</section>
 
@@ -40,71 +50,78 @@
 						<input type="text" id="job3" placeholder="業務を記入して下さい">
 						<textarea name="" id="job_d3" placeholder="業務の詳細を記入して下さい"></textarea>
 					</div>
-					<div>
-						<input type="text" id="job4" placeholder="業務を記入して下さい">
-						<textarea name="" id="job_d4" placeholder="業務の詳細を記入して下さい"></textarea>
-					</div>
-					<div>
-						<input type="text" id="job5" placeholder="業務を記入して下さい">
-						<textarea name="" id="job_d5" placeholder="業務の詳細を記入して下さい"></textarea>
-					</div>
-					<div>
-						<input type="text" id="job6" placeholder="業務を記入して下さい">
-						<textarea name="" id="job_d6" placeholder="業務の詳細を記入して下さい"></textarea>
-					</div>
-					<div>
-						<input type="text" id="job7" placeholder="業務を記入して下さい">
-						<textarea name="" id="job_d7" placeholder="業務の詳細を記入して下さい"></textarea>
-					</div>
-					<div>
-						<input type="text" id="job8" placeholder="業務を記入して下さい">
-						<textarea name="" id="job_d8" placeholder="業務の詳細を記入して下さい"></textarea>
-					</div>
-					<div>
-						<input type="text" id="job9" placeholder="業務を記入して下さい">
-						<textarea name="" id="job_d9" placeholder="業務の詳細を記入して下さい"></textarea>
-					</div>
-					<div>
-						<input type="text" id="job10" placeholder="業務を記入して下さい">
-						<textarea name="" id="job_d10" placeholder="業務の詳細を記入して下さい"></textarea>
+
+					<div class="accordion-box">
+						<input id="ac00" type="checkbox">
+						<label for="ac00"></label>
+						<div class="accordion-container">
+							<div>
+								<input type="text" id="job4" placeholder="業務を記入して下さい">
+								<textarea name="" id="job_d4" placeholder="業務の詳細を記入して下さい"></textarea>
+							</div>
+							<div>
+								<input type="text" id="job5" placeholder="業務を記入して下さい">
+								<textarea name="" id="job_d5" placeholder="業務の詳細を記入して下さい"></textarea>
+							</div>
+							<div>
+								<input type="text" id="job6" placeholder="業務を記入して下さい">
+								<textarea name="" id="job_d6" placeholder="業務の詳細を記入して下さい"></textarea>
+							</div>
+							<div>
+								<input type="text" id="job7" placeholder="業務を記入して下さい">
+								<textarea name="" id="job_d7" placeholder="業務の詳細を記入して下さい"></textarea>
+							</div>
+							<div>
+								<input type="text" id="job8" placeholder="業務を記入して下さい">
+								<textarea name="" id="job_d8" placeholder="業務の詳細を記入して下さい"></textarea>
+							</div>
+							<div>
+								<input type="text" id="job9" placeholder="業務を記入して下さい">
+								<textarea name="" id="job_d9" placeholder="業務の詳細を記入して下さい"></textarea>
+							</div>
+							<div>
+								<input type="text" id="job10" placeholder="業務を記入して下さい">
+								<textarea name="" id="job_d10" placeholder="業務の詳細を記入して下さい"></textarea>
+							</div>
+						</div>
 					</div>
 				</section>
 
-				<section>
+				<section class="updates">
 					<h2>更新</h2>
 					<div>
-						<input type="text" id="update1">
+						<input type="text" id="update1" placeholder="クライアント名を記入して下さい">
 						<div>
 							<input type="number" id="update_num1">件</div>
 					</div>
 					<div>
-						<input type="text" id="update2">
+						<input type="text" id="update2" placeholder="クライアント名を記入して下さい">
 						<div>
 							<input type="number" id="update_num2">件</div>
 					</div>
 					<div>
-						<input type="text" id="update3">
+						<input type="text" id="update3" placeholder="クライアント名を記入して下さい">
 						<div>
 							<input type="number" id="update_num3">件</div>
 					</div>
 					<div>
-						<input type="text" id="update4">
+						<input type="text" id="update4" placeholder="クライアント名を記入して下さい">
 						<div>
 							<input type="number" id="update_num4">件</div>
 					</div>
 					<div>
-						<input type="text" id="update5">
+						<input type="text" id="update5" placeholder="クライアント名を記入して下さい">
 						<div>
 							<input type="number" id="update_num5">件</div>
 					</div>
 				</section>
 
-				<section>
+				<section class="remark">
 					<h2>所感</h2>
-					<textarea name="" id="imp"></textarea>
+					<textarea name="" id="imp" placeholder="本日の所感を記入して下さい"></textarea>
 				</section>
 
-				<section>
+				<section class="button">
 					<a href="#output"><button id="inputButton">業務報告を出力する</button></a>
 				</section>
 			</section>
@@ -112,6 +129,7 @@
 			<!-- ＝＝＝＝＝＝出力＝＝＝＝＝＝＝＝ -->
 			<section id="output">
 			</section>
+			<p class="author">業務報告Generator ver1.0.0<br>Author:Ryota Isobe</p>
 		</div>
 	</div>
 </body>
