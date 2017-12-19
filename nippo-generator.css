@@ -1,5 +1,5 @@
 body {
-	font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+	font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', YuGothic, 'Yu Gothic', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 	font-size: 13px;
 	color: #fff;
 	line-height: 1.5;
