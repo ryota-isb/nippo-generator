@@ -39,6 +39,9 @@
 
 				/*業務詳細を取得*/
 				var jobDisc = document.getElementById('job_d' + (i + 1)).value;
+				/*改行処理*/
+				jobDisc = jobDisc.replace(/\r\n/g, "\n");
+				jobDisc = jobDisc.replace(/\n/g, '<br>');
 
 				/*業務を出力*/
 				/*出力エリアの取得*/
@@ -92,6 +95,9 @@
 
 			/*所感を取得*/
 			var imp = document.getElementById('imp').value;
+			/*改行処理*/
+			imp = imp.replace(/\r\n/g, "\n");
+			imp = imp.replace(/\n/g, '<br>');
 			/*所感の値があるときのみ出力する*/
 			if (imp) {
 				/*所感を出力*/
@@ -121,18 +127,6 @@
 				/*mailtoを実行*/
 				location.href = 'mailto:' + to + '?cc=' + cc + '&subject=' + subject + '&body=' + body + '%0D%0A';
 			};
-
 		};
-
-
-
-
-
-
-
-
 	};
-
-
-
 })();
