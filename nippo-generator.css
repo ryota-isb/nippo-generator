@@ -8,9 +8,9 @@ body {
 .bg {
 	background: #36D1DC;
 	/* fallback for old browsers */
-	background: -webkit-linear-gradient(to right bottom, #F47171, #F04242);
+	background: -webkit-linear-gradient(to right bottom, #36D1DC, #5B86E5);
 	/* Chrome 10-25, Safari 5.1-6 */
-	background: radial-gradient(#F47171, #F04242);
+	background: linear-gradient(to right bottom, #36D1DC, #5B86E5);
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -22,8 +22,26 @@ body {
 
 .title {
 	text-align: center;
+
 	padding-top: 80px;
+
 }
+
+/*
+.title h1 {
+	font-family: "Mplus 1p";
+	font-weight: 300;
+	font-size: 80px;
+	line-height: 1;
+}
+*/
+
+/*
+.title h1 > span {
+	font-family: 'Open Sans Condensed';
+	font-weight: lighter;
+}
+*/
 
 .title svg {
 	display: block;
