@@ -27,22 +27,6 @@ body {
 
 }
 
-/*
-.title h1 {
-	font-family: "Mplus 1p";
-	font-weight: 300;
-	font-size: 80px;
-	line-height: 1;
-}
-*/
-
-/*
-.title h1 > span {
-	font-family: 'Open Sans Condensed';
-	font-weight: lighter;
-}
-*/
-
 .title svg {
 	display: block;
 	width: 50%;
@@ -130,6 +114,44 @@ body {
 	margin-top: 24px;
 	display: block;
 	text-align: center;
+}
+.attendance > div {
+	margin-top: 24px;
+}
+.attendance > div > div {
+	display: inline-block;
+	text-align: left;
+	margin-left: 16px;
+}
+.attendance > div > div:first-child {
+	margin-left: 0;
+}
+.attendance > div > div:first-child::after {
+	content: "→";
+	display: inline-block;
+	font-size: 16px;
+	margin-left: 16px;
+}
+.attendance h3 {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: normal;
+	vertical-align: bottom;
+}
+
+.attendance input {
+	width: 70px;
+	margin-left: 8px;
+	padding: 0;
+	display: inline-block;
+	text-align: center;
+}
+
+.attendance input::-webkit-outer-spin-button,
+.attendance input::-webkit-inner-spin-button, 
+.attendance input::-webkit-clear-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 .jobs div {
