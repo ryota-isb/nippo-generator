@@ -25,6 +25,22 @@ body {
 .attendance > div > div:first-child::after {
 	display: none;
 }
+.attendance input {
+	vertical-align: bottom;
+}
 #output p {
 	padding: 7%;
+}
+.author {
+	margin-top: 20%;
+}
+
+/*アコーディオン*/
+.accordion-box label:after {
+    bottom: -16px;
+	left: 10px;
+}
+.accordion-box label:before {
+    bottom: -8px;
+	left: 30px;
 }
