@@ -1,0 +1,16 @@
+.title {
+	padding-top: 10%;
+}
+
+.title svg {
+	height: 10vw;
+}
+.title text {
+	font-size: 10vw;
+}
+.updates > div > input {
+	width: 82%;
+}
+.updates > div > div {
+	margin-left: 2%;
+}
