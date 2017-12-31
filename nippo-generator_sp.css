@@ -15,6 +15,9 @@ body {
 .input > section {
 	margin-top: 10%;
 }
+.input h2 {
+	font-weight: 300;
+}
 
 .attendance > div > div {
 	display: block;
@@ -36,6 +39,9 @@ body {
 }
 
 /*アコーディオン*/
+.accordion-box label {
+	font-weight: 300;
+}
 .accordion-box label:after {
     bottom: -16px;
 	left: 10px;
