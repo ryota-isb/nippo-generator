@@ -30,7 +30,11 @@
 			var userName = document.getElementById('name').value;
 
 			/*名前を出力*/
-			outputSection.insertAdjacentHTML('afterbegin', '<p id="text">お疲れ様です。' + userName + 'です。<br>本日の業務報告です。</p>');
+			if (userName) {
+				outputSection.insertAdjacentHTML('afterbegin', '<p id="text">お疲れ様です。' + userName + 'です。<br>本日の業務報告です。</p>');
+			} else {
+				outputSection.insertAdjacentHTML('afterbegin', '<p id="text"><span style="color:red;">※氏名を入力してください！</span></p>');
+			}
 
 			for (var i = 0; i < 10; i++) {
 				/*業務名を取得*/
@@ -91,7 +95,7 @@
 					break;
 				}
 			}
-			
+
 
 			/*所感を取得*/
 			var imp = document.getElementById('imp').value;
@@ -103,7 +107,7 @@
 				/*所感を出力*/
 				text.insertAdjacentHTML('beforeend', '<br><br>【所感】<br>' + imp);
 			}
-			
+
 			/*勤怠報告*/
 			/*出勤時刻を取得*/
 			const clockIn = document.getElementById('clockIn').value;
@@ -116,7 +120,7 @@
 			/*時刻を整形*/
 			const clockOutSplit = clockOut.split(':');
 			const clockOutTime = parseInt(clockOutSplit[0]) + '時' + clockOutSplit[1] + '分';
-			
+
 			/*勤務時間を取得*/
 			/*勤務時間を分単位に変換*/
 			/*出勤時刻を変換*/
@@ -126,39 +130,43 @@
 			if (clockOutSplit[0] > 10) {
 				clockOutMinutes = 60 * clockOutSplit[0] + clockOutSplit[1] * 1;
 			} else { //日付が変わった時の処理
-				clockOutMinutes = 60 * (clockOutSplit[0]*1 + 24*1) + clockOutSplit[1] * 1;
+				clockOutMinutes = 60 * (clockOutSplit[0] * 1 + 24 * 1) + clockOutSplit[1] * 1;
 			}
 			/*勤務時間を計算*/
 			const workHourMinutes = clockOutMinutes - clockInMinutes - 60; //休憩時間を引く
 			/*勤務時間を整形*/
 			let workHour;
-			if (workHourMinutes%60 === 0) { //00分の時の処理
-				workHour = Math.floor(workHourMinutes/60) + '時間';
+			if (workHourMinutes % 60 === 0) { //00分の時の処理
+				workHour = Math.floor(workHourMinutes / 60) + '時間';
 			} else {
-				workHour = Math.floor(workHourMinutes/60) + '時間' + (workHourMinutes % 60) + '分';
+				workHour = Math.floor(workHourMinutes / 60) + '時間' + (workHourMinutes % 60) + '分';
 			}
-			
+
 			/*残業時間を取得*/
 			/*残業時間を計算*/
 			const overTimeMinutes = workHourMinutes - 480;
 			/*残業時間を整形*/
 			let overTime;
-			if (overTimeMinutes%60 === 0) { //00分の時の処理
-				overTime = Math.floor(overTimeMinutes/60) + '時間';
+			if (overTimeMinutes % 60 === 0) { //00分の時の処理
+				overTime = Math.floor(overTimeMinutes / 60) + '時間';
 			} else {
-				overTime = Math.floor(overTimeMinutes/60) + '時間' + (overTimeMinutes % 60) + '分';
+				overTime = Math.floor(overTimeMinutes / 60) + '時間' + (overTimeMinutes % 60) + '分';
 			}
-			
-			/*勤怠報告を出力*/
-			if (overTimeMinutes > 0) {
-				text.insertAdjacentHTML('beforeend', '<br><br>【勤怠報告】<br>出勤時刻：' + clockInTime + '<br>退勤時間：' + clockOutTime + '<br>勤務時間：' + workHour + '（休憩時間1時間を除く）' + '<br>残業時間：' + overTime);
-			} else {
-				text.insertAdjacentHTML('beforeend', '<br><br>【勤怠報告】<br>出勤時刻：' + clockInTime + '<br>退勤時間：' + clockOutTime + '<br>勤務時間：' + workHour + '（休憩時間1時間を除く）');
-			}
-			
-			/*メール送信ボタンを生成*/
-			text.insertAdjacentHTML('afterend', '<button id="mailButton">メールで送る</button>');
 
+			/*勤怠報告を出力*/
+			if (clockIn && clockOut) {
+				if (overTimeMinutes > 0) {
+					text.insertAdjacentHTML('beforeend', '<br><br>【勤怠報告】<br>出勤時刻：' + clockInTime + '<br>退勤時間：' + clockOutTime + '<br>勤務時間：' + workHour + '（休憩時間1時間を除く）' + '<br>残業時間：' + overTime);
+				} else {
+					text.insertAdjacentHTML('beforeend', '<br><br>【勤怠報告】<br>出勤時刻：' + clockInTime + '<br>退勤時間：' + clockOutTime + '<br>勤務時間：' + workHour + '（休憩時間1時間を除く）');
+				}
+			}
+
+			/*メール送信ボタンを生成*/
+			if (userName) {
+				text.insertAdjacentHTML('afterend', '<button id="mailButton">メールで送る</button>');	
+			}
+			
 			/*メール送信ボタン押下時の動作*/
 			var mailButton = document.getElementById('mailButton');
 			mailButton.onclick = function () {
