@@ -158,7 +158,7 @@
 				if (overTimeMinutes > 0) {
 					text.insertAdjacentHTML('beforeend', '<br><br>【勤怠報告】<br>出勤時刻：' + clockInTime + '<br>退勤時間：' + clockOutTime + '<br>勤務時間：' + workHour + '（休憩時間1時間を除く）' + '<br>残業時間：' + overTime);
 				} else {
-					text.insertAdjacentHTML('beforeend', '<br><br>【勤怠報告】<br>出勤時刻：' + clockInTime + '<br>退勤時間：' + clockOutTime + '<br>勤務時間：' + workHour + '（休憩時間1時間を除く）');
+					text.insertAdjacentHTML('beforeend', '<br><br>【勤怠報告】<br>出勤時刻：' + clockInTime + '<br>退勤時刻：' + clockOutTime + '<br>勤務時間：' + workHour + '（休憩時間1時間を除く）');
 				}
 			}
 
