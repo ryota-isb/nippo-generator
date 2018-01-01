@@ -33,7 +33,7 @@
 			if (userName) {
 				outputSection.insertAdjacentHTML('afterbegin', '<p id="text">お疲れ様です。' + userName + 'です。<br>本日の業務報告です。</p>');
 			} else {
-				outputSection.insertAdjacentHTML('afterbegin', '<p id="text"><span style="color:red;">※氏名を入力してください！</span></p>');
+				outputSection.insertAdjacentHTML('afterbegin', '<p id="text"><span style="color:#ffd700;">※氏名を入力してください！</span></p>');
 			}
 
 			for (var i = 0; i < 10; i++) {
