@@ -1,51 +1,52 @@
 text {
-    /* 色はお好みで */
-    stroke: #fff;
-    /* 色はお好みで */
-    fill: #fff;
-    /* 100%だと最後まで表示されないので多めに設定する */
-    stroke-dasharray: 200% 200%;
-    /* 線が細いほうがアニメーションが綺麗なので0.5pxを指定 */
-    stroke-width: 0.5px;
-    -webkit-animation: stroke-anim 2.5s linear;
-    animation: stroke-anim 2.5s linear;
+	/* 色はお好みで */
+	stroke: #fff;
+	/* 色はお好みで */
+	fill: #fff;
+	/* 100%だと最後まで表示されないので多めに設定する */
+	stroke-dasharray: 200% 200%;
+	/* 線が細いほうがアニメーションが綺麗なので0.5pxを指定 */
+	stroke-width: 0.5px;
+	-webkit-animation: stroke-anim 4s linear;
+	animation: stroke-anim 4s linear;
 }
 
 .m1plus {
 	font-family: "Mplus 1p";
 	font-weight: 300;
 }
+
 .opensans {
 	font-family: 'Open Sans Condensed';
 	font-weight: lighter;
 }
 
 @-webkit-keyframes stroke-anim {
-  0% {
-    /* 100%だと最後まで表示されないので多めに設定する */
-    stroke-dashoffset: 200%;
-    fill:transparent;
-  }
-  50% {
-    fill:transparent;
-  }
-  100% {
-    stroke-dashoffset: 0%;
-    fill:#fff;
-  }
+	0% {
+		/* 100%だと最後まで表示されないので多めに設定する */
+		stroke-dashoffset: 200%;
+		fill: transparent;
+	}
+	50% {
+		fill: transparent;
+		stroke-dashoffset: 0%;
+	}
+	100% {
+		fill: #fff;
+	}
 }
 
 @keyframes stroke-anim {
-  0% {
-    /* 100%だと最後まで表示されないので多めに設定する */
-    stroke-dashoffset: 200%;
-    fill:transparent;
-  }
-  50% {
-    fill:transparent;
-  }
-  100% {
-    stroke-dashoffset: 0%;
-    fill:#fff;
-  }
+	0% {
+		/* 100%だと最後まで表示されないので多めに設定する */
+		stroke-dashoffset: 200%;
+		fill: transparent;
+	}
+	50% {
+		fill: transparent;
+		stroke-dashoffset: 0%;
+	}
+	100% {
+		fill: #fff;
+	}
 }
