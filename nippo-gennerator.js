@@ -154,6 +154,7 @@
 			}
 
 			/*勤怠報告を出力*/
+			/*
 			if (clockIn && clockOut) {
 				if (overTimeMinutes > 0) {
 					text.insertAdjacentHTML('beforeend', '<br><br>【勤怠報告】<br>出勤時刻：' + clockInTime + '<br>退勤時間：' + clockOutTime + '<br>勤務時間：' + workHour + '（休憩時間1時間を除く）' + '<br>残業時間：' + overTime);
@@ -161,19 +162,23 @@
 					text.insertAdjacentHTML('beforeend', '<br><br>【勤怠報告】<br>出勤時刻：' + clockInTime + '<br>退勤時刻：' + clockOutTime + '<br>勤務時間：' + workHour + '（休憩時間1時間を除く）');
 				}
 			}
+			*/
+			if (clockIn && clockOut) {
+				text.insertAdjacentHTML('beforeend', '<br><br>【勤怠報告】<br>出勤時刻：' + clockInTime + '<br>退勤時刻：' + clockOutTime + '<br>勤務時間：' + workHour + '（休憩時間1時間を除く）');
+			}
 
 			/*メール送信ボタンを生成*/
 			if (userName) {
-				text.insertAdjacentHTML('afterend', '<button id="mailButton">メールで送る</button>');	
+				text.insertAdjacentHTML('afterend', '<button id="mailButton">メールで送る</button>');
 			}
-			
+
 			/*メール送信ボタン押下時の動作*/
 			var mailButton = document.getElementById('mailButton');
 			mailButton.onclick = function () {
 
 				/*宛先・CCを設定*/
 				var to = 'sato@ga-design.jp'
-				var cc = 'fukuda@ga-design.jp,morinishi@ga-design.jp'
+				var cc = 'fukuda@ga-design.jp,morinishi@ga-design.jp,tsuboi@ga-design.jp'
 
 				/*タイトルを設定*/
 				var subject = "【" + userName + "】業務報告" + "【" + reportDate() + '】';
