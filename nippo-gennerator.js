@@ -73,7 +73,7 @@
 				}
 			}
 
-			for (var n = 0; n < 5; n++) {
+			for (var n = 0; n < 10; n++) {
 				/*更新クライアント名を取得*/
 				var update = document.getElementById('update' + (n + 1)).value;
 
