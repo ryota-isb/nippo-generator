@@ -31,6 +31,9 @@ body {
 .attendance input {
 	padding: 4px 14px
 }
+.switchArea #swImg {
+	margin-top: 0;
+}
 #output p {
 	padding: 7%;
 }

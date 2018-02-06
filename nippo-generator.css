@@ -20,8 +20,8 @@ body {
 
 	background: #36D1DC;
 	/* fallback for old browsers */
-	background: -webkit-linear-gradient(to right bottom, #1488cc, #2b32b2);
 	/* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-gradient(linear, left top, right bottom, from(#1488cc), to(#2b32b2));
 	background: linear-gradient(to right bottom, #1488cc, #2b32b2);
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -131,6 +131,8 @@ body {
 	text-align: center;
 }
 
+.attendance {
+}
 .attendance > div {
 	margin-top: 24px;
 }
@@ -172,6 +174,81 @@ body {
 .attendance input::-webkit-clear-button {
 	-webkit-appearance: none;
 	margin: 0;
+}
+
+.attendance p {
+	display: inline;
+}
+
+/* === ボタンを表示するエリア ============================== */
+.switchArea {
+	line-height    : 30px;                /* 1行の高さ          */
+	letter-spacing : 0;                   /* 文字間             */
+	text-align     : center;              /* 文字位置は中央     */
+	font-size      : 13px;                /* 文字サイズ         */
+
+	position       : relative;            /* 親要素が基点       */
+	margin         : auto;                /* 中央寄せ           */
+	width          : 68px;               /* ボタンの横幅       */
+	background     : transparent;                /* デフォルト背景色   */
+	display: inline-block;
+	margin-left: 5px;
+}
+
+/* === チェックボックス ==================================== */
+.switchArea input[type="checkbox"] {
+	display        : none;            /* チェックボックス非表示 */
+}
+
+/* === チェックボックスのラベル（標準） ==================== */
+.switchArea label {
+	display        : block;               /* ボックス要素に変更 */
+	-webkit-box-sizing     : border-box;
+	box-sizing     : border-box;          /* 枠線を含んだサイズ */
+	height         : 30px;                /* ボタンの高さ       */
+	border         : 2px solid #999999;   /* 未選択タブのの枠線 */
+	border-radius  : 5px;                /* 角丸               */
+}
+
+/* === チェックボックスのラベル（ONのとき） ================ */
+.switchArea input[type="checkbox"]:checked +label {
+	border-color   : #fff;             /* 選択タブの枠線     */
+	background-color: #31A8FF;
+}
+
+/* === 表示する文字（標準） ================================ */
+.switchArea label span:after{
+	content        : "OFF";               /* 表示する文字       */
+	padding        : 0 0 0 20px;          /* 表示する位置       */
+	color          : #999999;             /* 文字色             */
+}
+
+/* === 表示する文字（ONのとき） ============================ */
+.switchArea  input[type="checkbox"]:checked + label span:after{
+	content        : "ON";                /* 表示する文字       */
+	padding        : 0 20px 0 0;          /* 表示する位置       */
+	color          : #fff;             /* 文字色             */
+}
+
+/* === 丸部分のSTYLE（標準） =============================== */
+.switchArea #swImg {
+	position       : absolute;            /* 親要素からの相対位置*/
+	width          : 22px;                /* 丸の横幅           */
+	height         : 22px;                /* 丸の高さ           */
+	background     : #999999;             /* カーソルタブの背景 */
+	top            : 4px;                 /* 親要素からの位置   */
+	left           : 4px;                 /* 親要素からの位置   */
+	border-radius  : 2px;                /* 角丸               */
+	-webkit-transition     : .2s;
+	transition     : .2s;                 /* 滑らか変化         */
+	margin-left: 0;
+}
+
+/* === 丸部分のSTYLE（ONのとき） =========================== */
+.switchArea input[type="checkbox"]:checked ~ #swImg {
+	-webkit-transform      : translateX(38px);
+	transform      : translateX(38px);    /* 丸も右へ移動       */
+	background     : #fff;             /* カーソルタブの背景 */
 }
 
 .jobs div {
@@ -239,6 +316,7 @@ body {
 	height: 40px;
 	border: 1px solid #fff;
 	background-color: transparent;
+	-webkit-transition: background-color .3s;
 	transition: background-color .3s;
 	color: #fff;
 }
@@ -253,6 +331,8 @@ body {
 	background-color: rgba(255, 255, 255, .1);
 	border: 1px solid #fff;
 
+	-webkit-transition: opacity 0.4s;
+
 	transition: opacity 0.4s;
 }
 
@@ -261,6 +341,7 @@ body {
 	height: 40px;
 	border: 1px solid #fff;
 	background-color: transparent;
+	-webkit-transition: background-color .3s;
 	transition: background-color .3s;
 	color: #fff;
 	display: block;
