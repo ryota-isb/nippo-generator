@@ -18,6 +18,16 @@
 			var day = now.getDate();
 			return (mon + '/' + day);
 		};
+		
+		/*現在時刻を退勤時刻に設定*/		
+		function setReportTime() {
+			const now2 = new Date();
+			const hour = now2.getHours();
+			const minute = now2.getMinutes();
+			return hour + ":" + minute;
+		};
+		document.getElementById('clockOut').value = setReportTime();
+		
 
 		/*出力ボタン押下時の動作*/
 		var inputButton = document.getElementById('inputButton');
