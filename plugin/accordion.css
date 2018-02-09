@@ -5,7 +5,7 @@
     cursor: pointer;
     text-align: center;
 	font-family: "Mplus 1p";
-	font-weight: 100;
+	font-weight: 300;
     font-size: 16px;
     position: absolute;
     bottom: 0;
@@ -20,8 +20,13 @@
     left: 0%;
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    color: #fff;
+    color: #666;
     width: 18.75rem;
+	-webkit-transition: letter-spacing .2s ease-in-out;
+	transition: letter-spacing .2s ease-in-out;
+}
+.accordion-box label:hover::after {
+	letter-spacing: .1em;
 }
 .accordion-box label:before {
     content: "↓";
@@ -31,18 +36,21 @@
     left: 20px;
     -webkit-transform: translate(-140px, 0);
     transform: translate(-140px, 0);
-	border: 1px solid #fff;
+	color: #fff;
+	border: 1px solid transparent;
+	background-color: #aaa;
     z-index: 1;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
     border-radius: 100%;
     width: 25px;
     height: 25px;
     line-height: 20px;
-	transition: background-color .3s;
+	-webkit-transition: background-color .3s, color .3s;
+	transition: background-color .3s, color .3s;
 }
 .accordion-box label:hover::before {
-	background-color: rgba(255, 255, 255, .6);
+	background-color: #E7FF19;
+	color: #666;
+	border: 1px solid transparent;
 }
 .accordion-box > input {
     display: none;
@@ -51,9 +59,6 @@
     overflow: hidden;
     height: 0px; /* 開く前に見えている部分の高さ */
     -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    -o-transition: all 1s;
     transition: all 1s;
 }
 
@@ -70,8 +75,5 @@
 .accordion-box > input:checked ~ .accordion-container {
     height: auto;
     -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
-    -o-transition: all 1s;
     transition: all 1s;
 }

@@ -1,8 +1,8 @@
 text {
 	/* 色はお好みで */
-	stroke: #fff;
+	stroke: #666;
 	/* 色はお好みで */
-	fill: #fff;
+	fill: #E7FF19;
 	/* 100%だと最後まで表示されないので多めに設定する */
 	stroke-dasharray: 200% 200%;
 	/* 線が細いほうがアニメーションが綺麗なので0.5pxを指定 */
@@ -32,7 +32,7 @@ text {
 		stroke-dashoffset: 0%;
 	}
 	100% {
-		fill: #fff;
+		fill: #E7FF19;
 	}
 }
 
@@ -47,6 +47,6 @@ text {
 		stroke-dashoffset: 0%;
 	}
 	100% {
-		fill: #fff;
+		fill: #E7FF19;
 	}
 }

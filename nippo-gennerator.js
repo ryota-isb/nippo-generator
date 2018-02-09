@@ -182,7 +182,7 @@
 				/*メール送信ボタンを生成*/
 				text.insertAdjacentHTML('afterend', '<button id="mailButton">メールで送る</button>');
 			} else {
-				outputSection.insertAdjacentHTML('afterbegin', '<p id="text"><span style="color:#ffd700;">※氏名を入力してください！</span></p>');
+				outputSection.insertAdjacentHTML('afterbegin', '<p id="text"><span style="color:#666;">※氏名を入力してください！</span></p>');
 			}
 
 			/*メール送信ボタン押下時の動作*/

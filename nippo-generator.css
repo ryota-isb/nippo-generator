@@ -1,7 +1,7 @@
 body {
 	font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', YuGothic, 'Yu Gothic', 'Hiragino Sans', 'ヒラギノ角ゴシック', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 	font-size: 13px;
-	color: #fff;
+	color: #666;
 	line-height: 1.5;
 }
 
@@ -18,12 +18,7 @@ body {
 	content: "";
 	z-index: -100000;
 
-	background: #36D1DC;
-	/* fallback for old browsers */
-	/* Chrome 10-25, Safari 5.1-6 */
-	background: -webkit-gradient(linear, left top, right bottom, from(#1488cc), to(#2b32b2));
-	background: linear-gradient(to right bottom, #1488cc, #2b32b2);
-	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #eee;
 }
 
 .container {
@@ -65,9 +60,9 @@ body {
 
 .input h2 {
 	font-family: "Mplus 1p";
-	font-weight: lighter;
+	font-weight: 300;
 	font-size: 24px;
-	border-bottom: 1px solid #fff;
+	border-bottom: 5px solid #E7FF19;
 	display: inline-block;
 }
 
@@ -76,25 +71,25 @@ body {
 	max-width: 400px;
 	height: 24px;
 	padding-left: 5px;
-	border: 1px solid #fff;
-	background-color: rgba(255, 255, 255, .1);
-	color: #fff;
+/*	border: 1px solid #333;*/
+	background-color: #fff;
+	color: #666;
 }
 
 .input input:placeholder-shown {
-	color: rgba(255, 255, 255, .6);
+	color: #aaa;
 }
 
 .input input::-webkit-input-placeholder {
-	color: rgba(255, 255, 255, .6);
+	color: #aaa;
 }
 
 .input input::-moz-placeholder {
-	color: rgba(255, 255, 255, .6);
+	color: #aaa;
 }
 
 .input input:-ms-input-placeholder {
-	color: rgba(255, 255, 255, .6);
+	color: #aaa;
 }
 
 .input textarea {
@@ -103,25 +98,24 @@ body {
 	max-width: 400px;
 	height: 160px;
 	padding: 5px;
-	border: 1px solid #fff;
-	background-color: rgba(255, 255, 255, .1);
-	color: #fff;
+	background-color: #fff;
+	color: #666;
 }
 
 .input textarea:placeholder-shown {
-	color: rgba(255, 255, 255, .6);
+	color: #aaa;
 }
 
 .input textarea::-webkit-input-placeholder {
-	color: rgba(255, 255, 255, .6);
+	color: #aaa;
 }
 
 .input textarea::-moz-placeholder {
-	color: rgba(255, 255, 255, .6);
+	color: #aaa;
 }
 
 .input textarea:-ms-input-placeholder {
-	color: rgba(255, 255, 255, .6);
+	color: #aaa;
 }
 
 .name input {
@@ -206,28 +200,29 @@ body {
 	-webkit-box-sizing     : border-box;
 	box-sizing     : border-box;          /* 枠線を含んだサイズ */
 	height         : 30px;                /* ボタンの高さ       */
-	border         : 2px solid #999999;   /* 未選択タブのの枠線 */
+	border         : 2px solid #aaa;   /* 未選択タブのの枠線 */
+	background-color: #aaa;
 	border-radius  : 5px;                /* 角丸               */
 }
 
 /* === チェックボックスのラベル（ONのとき） ================ */
 .switchArea input[type="checkbox"]:checked +label {
-	border-color   : #fff;             /* 選択タブの枠線     */
-	background-color: #31A8FF;
+	border-color   : #E7FF19;             /* 選択タブの枠線     */
+	background-color: #E7FF19;
 }
 
 /* === 表示する文字（標準） ================================ */
 .switchArea label span:after{
 	content        : "OFF";               /* 表示する文字       */
 	padding        : 0 0 0 20px;          /* 表示する位置       */
-	color          : #999999;             /* 文字色             */
+	color          : #fff;             /* 文字色             */
 }
 
 /* === 表示する文字（ONのとき） ============================ */
 .switchArea  input[type="checkbox"]:checked + label span:after{
 	content        : "ON";                /* 表示する文字       */
 	padding        : 0 20px 0 0;          /* 表示する位置       */
-	color          : #fff;             /* 文字色             */
+	color          : #888;             /* 文字色             */
 }
 
 /* === 丸部分のSTYLE（標準） =============================== */
@@ -235,7 +230,7 @@ body {
 	position       : absolute;            /* 親要素からの相対位置*/
 	width          : 22px;                /* 丸の横幅           */
 	height         : 22px;                /* 丸の高さ           */
-	background     : #999999;             /* カーソルタブの背景 */
+	background     : #777;             /* カーソルタブの背景 */
 	top            : 4px;                 /* 親要素からの位置   */
 	left           : 4px;                 /* 親要素からの位置   */
 	border-radius  : 2px;                /* 角丸               */
@@ -248,7 +243,7 @@ body {
 .switchArea input[type="checkbox"]:checked ~ #swImg {
 	-webkit-transform      : translateX(38px);
 	transform      : translateX(38px);    /* 丸も右へ移動       */
-	background     : #fff;             /* カーソルタブの背景 */
+	background     : #777;             /* カーソルタブの背景 */
 }
 
 .jobs div {
@@ -314,22 +309,21 @@ body {
 .button button {
 	width: 192px;
 	height: 40px;
-	border: 1px solid #fff;
-	background-color: transparent;
-	-webkit-transition: background-color .3s;
-	transition: background-color .3s;
+	background-color: #aaa;
+	-webkit-transition: background-color .3s, color .3s;
+	transition: background-color .3s, color .3s;
 	color: #fff;
 }
 
 .button button:hover {
-	background-color: rgba(255, 255, 255, .5);
+	color: #E7FF19;
+	background-color: #666;
 	cursor: pointer;
 }
 
 #output p {
 	padding: 50px;
-	background-color: rgba(255, 255, 255, .1);
-	border: 1px solid #fff;
+	background-color:#fff;
 
 	-webkit-transition: opacity 0.4s;
 
@@ -339,10 +333,9 @@ body {
 #output button {
 	width: 192px;
 	height: 40px;
-	border: 1px solid #fff;
-	background-color: transparent;
-	-webkit-transition: background-color .3s;
-	transition: background-color .3s;
+	background-color: #aaa;
+	-webkit-transition: background-color .3s, color .3s;
+	transition: background-color .3s, color .3s;
 	color: #fff;
 	display: block;
 	margin: 0 auto;
@@ -350,7 +343,8 @@ body {
 }
 
 #output button:hover {
-	background-color: rgba(255, 255, 255, .5);
+	background-color: #666;
+	color: #E7FF19;
 	cursor: pointer;
 }
 
