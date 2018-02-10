@@ -243,7 +243,7 @@ body {
 .switchArea input[type="checkbox"]:checked ~ #swImg {
 	-webkit-transform      : translateX(38px);
 	transform      : translateX(38px);    /* 丸も右へ移動       */
-	background     : #777;             /* カーソルタブの背景 */
+	background     : #888;             /* カーソルタブの背景 */
 }
 
 .jobs div {

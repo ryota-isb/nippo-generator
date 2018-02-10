@@ -4,7 +4,8 @@ text {
 	/* 色はお好みで */
 	fill: #E7FF19;
 	/* 100%だと最後まで表示されないので多めに設定する */
-	stroke-dasharray: 200% 200%;
+	stroke-dasharray: 200%;
+	stroke-dashoffset: 0%;
 	/* 線が細いほうがアニメーションが綺麗なので0.5pxを指定 */
 	stroke-width: 0.5px;
 	-webkit-animation: stroke-anim 4s linear;
@@ -23,11 +24,10 @@ text {
 
 @-webkit-keyframes stroke-anim {
 	0% {
-		/* 100%だと最後まで表示されないので多めに設定する */
 		stroke-dashoffset: 200%;
 		fill: transparent;
 	}
-	50% {
+	75% {
 		fill: transparent;
 		stroke-dashoffset: 0%;
 	}
@@ -38,11 +38,10 @@ text {
 
 @keyframes stroke-anim {
 	0% {
-		/* 100%だと最後まで表示されないので多めに設定する */
 		stroke-dashoffset: 200%;
 		fill: transparent;
 	}
-	50% {
+	75% {
 		fill: transparent;
 		stroke-dashoffset: 0%;
 	}
