@@ -296,7 +296,7 @@ body {
 	border-top: 80px solid #f00;
 }
 
-.remark textarea {
+.remark textarea, .tomorrow textarea {
 	display: block;
 	margin: 0 auto;
 	margin-top: 24px;

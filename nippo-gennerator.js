@@ -63,17 +63,17 @@
 						if (i === 0) {
 							/*1回目*/
 							if (jobDisc) {
-								text.insertAdjacentHTML('beforeend', '<br><br>【業務】<br>・' + job + '<br>' + jobDisc);
+								text.insertAdjacentHTML('beforeend', '<br><br>【業務】<br>■' + job + '<br>' + jobDisc);
 							} else {
-								text.insertAdjacentHTML('beforeend', '<br><br>【業務】<br>・' + job);
+								text.insertAdjacentHTML('beforeend', '<br><br>【業務】<br>■' + job);
 							}
 
 						} else {
 							/*2回目以降*/
 							if (jobDisc) {
-								text.insertAdjacentHTML('beforeend', '<br><br>・' + job + '<br>' + jobDisc);
+								text.insertAdjacentHTML('beforeend', '<br><br>■' + job + '<br>' + jobDisc);
 							} else {
-								text.insertAdjacentHTML('beforeend', '<br><br>・' + job);
+								text.insertAdjacentHTML('beforeend', '<br><br>■' + job);
 							}
 						}
 						/*業務が空の場合ループ終了*/
@@ -115,6 +115,17 @@
 				if (imp) {
 					/*所感を出力*/
 					text.insertAdjacentHTML('beforeend', '<br><br>【所感】<br>' + imp);
+				}
+				
+				/*明日の予定を取得*/
+				var tommorow = document.getElementById('tomorrow').value;
+				/*改行処理*/
+				imp = tommorow.replace(/\r\n/g, "\n");
+				imp = tommorow.replace(/\n/g, '<br>');
+				/*明日の予定の値があるときのみ出力する*/
+				if (tommorow) {
+					/*明日の予定を出力*/
+					text.insertAdjacentHTML('beforeend', '<br><br>【明日の予定】<br>' + tommorow);
 				}
 
 				/*勤怠報告*/
