@@ -26,7 +26,10 @@
 			if (String(hour).length < 2) {
 				hour = "0" + hour;
 			}
-			const minute = now2.getMinutes();
+			let minute = now2.getMinutes();
+			if (String(minute).length < 2) {
+				minute = "0" + minute;
+			}
 			return hour + ":" + minute;
 		};
 		document.getElementById('clockOut').value = setReportTime();
