@@ -123,7 +123,7 @@
 				/*明日の予定を取得*/
 				var tommorow = document.getElementById('tomorrow').value;
 				/*改行処理*/
-				tomorrow = tommorow.replace(/\r\n/g, "\n");
+				tommorow = tommorow.replace(/\r\n/g, "\n");
 				tommorow = tommorow.replace(/\n/g, '<br>');
 				/*明日の予定の値があるときのみ出力する*/
 				if (tommorow) {
