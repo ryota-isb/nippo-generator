@@ -205,7 +205,7 @@
 
 				/*宛先・CCを設定*/
 				var to = 'sato@ga-design.jp'
-				var cc = 'fukuda@ga-design.jp,morinishi@ga-design.jp,tsuboi@ga-design.jp'
+				var cc = 'fukuda@ga-design.jp,nishiuchi@ga-design.jp,isobe@ga-design.jp'
 
 				/*タイトルを設定*/
 				var subject = "【" + userName + "】業務報告" + "【" + reportDate() + '】';
